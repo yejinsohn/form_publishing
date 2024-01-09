@@ -1,0 +1,116 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+#form-page {
+    background-color: #edf2f1;
+    padding: 80px 0;
+    overflow: hidden;
+}
+#form-page .main-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+#form-page .main-container article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* 메뉴 style */
+#form-page .menu-box {
+    width: 20%;
+    height: 30%;
+}
+#form-page .menu-box .title {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #444444;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+#form-page .menu-box .menu-text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: #656565;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 설문 폼 style */
+#form-page .form-box {
+    width: 40%;
+    height: auto;
+}
+#form-page .form-box .title {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #444444;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#form-page .form-box .menu-area {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: #444444;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* input-box style */
+#form-page .form-box .menu-area #input-box {
+    width: 100%;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+input:focus {
+    outline:none;
+}
+
+/* button style */
+#form-page .form-box #next-btn {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 13px;
+    /* display: inline-flex;
+    justify-content: center; */
+    padding: 10px 20px;
+    color: #fcfcfc;
+    background: #19d6b4;
+    margin-top: 20px;
+    border-radius: 100px;
+    border: none;
+    float: right;
+}
+#form-page .form-box #pre-btn {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 13px;
+    /* display: inline-flex;
+    justify-content: center; */
+    padding: 10px 20px;
+    color: #fcfcfc;
+    background: #19d6b4;
+    margin-top: 20px;
+    border-radius: 100px;
+    border: none;
+    float: left;
+}
