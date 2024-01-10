@@ -1,13 +1,21 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
+.header{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+}
 #form-page {
-    background-color: #edf2f1;
+    background-color: #edf0f2;
     padding: 80px 0;
     overflow: hidden;
 }
 #form-page .main-container {
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
 }
@@ -17,58 +25,96 @@
     border-radius: 20px;
 }
 
-/* 메뉴 style */
+/* menu-box style */
 #form-page .menu-box {
-    width: 20%;
+    width: 10%;
     height: 30%;
 }
 #form-page .menu-box .title {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 20px;
     text-align: center;
     color: #444444;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
-#form-page .menu-box .menu-text {
+#form-page .menu-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 20px;
     color: #656565;
+    flex-wrap: wrap;
     margin-bottom: 20px;
-    padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
+#form-page .menu-box .menu-text .click{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    color: #319ff8;
+    flex-wrap: wrap;
+}
 
-/* 설문 폼 style */
+/* form-box style */
 #form-page .form-box {
-    width: 40%;
+    width: 70%;
     height: auto;
 }
 #form-page .form-box .title {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 20px;
     text-align: center;
     color: #444444;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
-
 #form-page .form-box .menu-area {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 20px;
     color: #444444;
     margin-bottom: 20px;
     padding-bottom: 20px;
+}
+#form-page .form-box .main-set {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+}
+#form-page .basic-text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #656565;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: left;
+}
+#form-page .basic-text-end {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #656565;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#form-page .form-box .main-set .main-commend {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
 }
 
 /* input-box style */
@@ -80,9 +126,33 @@
     border-right: none;
     border-bottom: 1px solid #c9c9c9;
 }
-
 input:focus {
     outline:none;
+}
+
+/* 메인 이미지 */
+.main-set .mobile {
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+}
+.main-set .basic {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* 스티키 이미지 */
+.menu-step3 #mobile {
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.menu-step3 #pc {
+    width: 700px;
+    height: 50px;
+    object-fit: contain;
 }
 
 /* button style */
@@ -90,11 +160,10 @@ input:focus {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;
-    /* display: inline-flex;
-    justify-content: center; */
+    display: inline-flex;
     padding: 10px 20px;
     color: #fcfcfc;
-    background: #19d6b4;
+    background: #194bd6;
     margin-top: 20px;
     border-radius: 100px;
     border: none;
@@ -104,13 +173,40 @@ input:focus {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;
-    /* display: inline-flex;
-    justify-content: center; */
+    display: inline-flex;
     padding: 10px 20px;
     color: #fcfcfc;
-    background: #19d6b4;
+    background: #194bd6;
     margin-top: 20px;
     border-radius: 100px;
     border: none;
     float: left;
+}
+
+
+/* 반응형 menu-box */
+@media  (max-width: 1024px){
+    #form-page .menu-box {
+        width: 15%;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    #form-page .menu-box {
+        width: 100%;
+    }
+}
+
+/* 반응형 form-box */
+@media (max-width: 1024px){
+    #form-page .form-box {
+        width: 70%;
+        height: auto;
+    }
+}
+@media (max-width: 768px){
+    #form-page .form-box {
+        width: 100%;
+        height: auto;
+    }
 }
