@@ -91,6 +91,12 @@
     font-size: 13px;
     text-align: center;
 }
+#form-page .form-box .layout-set {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+}
 #form-page .basic-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
@@ -109,6 +115,7 @@
     color: #656565;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    padding-bottom: 20px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -143,20 +150,35 @@ input:focus {
 }
 
 /* 스티키 이미지 */
-.menu-step3 #mobile {
+#menu-step3 #mobile {
     width: 200px;
     height: 50px;
     object-fit: contain;
 }
 
-.menu-step3 #pc {
+#menu-step3 #pc {
     width: 700px;
     height: 50px;
     object-fit: contain;
 }
 
+/* 폰트 이미지 */
+#menu-step4 #font-img {
+    width: 100px;
+    height: 30px;
+    object-fit: contain;
+    
+}
+/* 레이아웃 이미지 */
+#menu-step5 .layout-img {
+    width: 300px;
+    height: 100px;
+    object-fit: contain;
+    
+}
+
 /* button style */
-#form-page .form-box #next-btn {
+#form-page .form-box #next-btn1 {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;

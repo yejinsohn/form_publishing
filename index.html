@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
     <link href="css/form.css" rel="stylesheet">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/button.js"></script>
 </head>
 <body>
     <section>
@@ -20,11 +22,11 @@
             <article class="menu-box">
                 <p class="title">설문 단계</p>
                 <div class="menu-text">
-                    <p class="menu" onclick="alert('1번메뉴선택')">1. 기본 정보</p>
-                    <p class="menu click" onclick="alert('2번메뉴선택')">2. 메인 화면 선택</p>
+                    <p class="menu click" onclick="alert('1번메뉴선택')">1. 기본 정보</p>
+                    <p class="menu" onclick="alert('2번메뉴선택')">2. 메인 화면 선택</p>
                     <p class="menu" onclick="alert('3번메뉴선택')">3. 스티키 메뉴 여부</p>
                     <p class="menu" onclick="alert('4번메뉴선택')">4. 강조 폰트 키워드</p>
-                    <p class="menu" onclick="alert('5번메뉴선택')">5. 스타일 선택</p>
+                    <p class="menu" onclick="alert('5번메뉴선택')">5. 레이아웃 선택</p>
                     <p class="menu" onclick="alert('6번메뉴선택')">6. 구성 선택</p>
                 </div>
             </article>
@@ -32,26 +34,26 @@
             <!-- 설문폼 -->
             <article class="form-box">
                 <!-- 기본 정보 -->
-                <div class="menu-area" style="display: none;">
+                <div class="menu-area" style="display: block;">
                     <p class="title">Step1. 기본 정보</p>
-                    <div class="menu-step1">
+                    <div id="menu-step1">
                         <div>
                             <form>
                                 <div>
                                     <p>상호명</p> 
-                                        <input id="input-box" type="text" placeholder="상호명을 입력해주세요."; required>
+                                        <input id="input-box" type="text" placeholder="상호명을 입력해주세요.";>
                                 </div>
                                 <div>
                                     <p>연락처</p>
-                                        <p><input id="input-box" type="tel" placeholder="휴대폰 번호를 입력해주세요." required></p>
-                                        <p><input id="input-box" type="email" placeholder="이메일을 입력해주세요." required></p>
+                                        <p><input id="input-box" type="tel" placeholder="휴대폰 번호를 입력해주세요."></p>
+                                        <p><input id="input-box" type="email" placeholder="이메일을 입력해주세요."></p>
                                 </div>
                                 <div>
                                     <p>컬러톤</p>
                                         <input id="input-box" type="color">
                                 </div>
                                 <div class="btn">
-                                    <button id="next-btn" onclick="">Next</button>
+                                    <button id="next-btn1" onclick="next1()">Next</button>
                                 </div>
                             </form>
                         </div>
@@ -60,9 +62,9 @@
                  <!-- 메인 화면 선택 -->
                 <div class="menu-area" style="display: none;">
                     <p class="title">Step2. 메인 화면 선택</p>
-                    <div class="menu-step2">
+                    <div id="menu-step2">
                         <div>
-                            <input type="radio" name="main-style" value="Set1">Set1
+                            <input type="radio" name="main" value="Set1">Set1
                                 <div class="main-set">
                                     <p class="main-commend"> 추천 대상 : 당사 로고가 없는 경우, 대표메뉴 사진을 강조하고 싶은 경우, 
                                         넣고싶은 수식어가 많은 경우, 강조하고 싶은 키워드가 있는 경우</p>
@@ -81,7 +83,7 @@
                                         - 로고 (상단 좌측에 들어가게 됩니다)<br>
                                     </p>
                                 </div>
-                            <input type="radio" name="main-style" value="Set2">Set2
+                            <input type="radio" name="main" value="Set2">Set2
                                 <div class="main-set">
                                     <p class="main-commend"> 추천 대상 : 로고(상호명)을 강조하고 싶은 경우, 대표메뉴 하나를 강조하고 싶은 경우</p>
                                     <img class="mobile" src="img/main-set2-mobile.png" alt="main-set2-mobile">
@@ -94,7 +96,7 @@
                                         - 깔끔한 배경사진<br>
                                     </p>
                                 </div>
-                            <input type="radio" name="main-style" value="Set3">Set3
+                            <input type="radio" name="main" value="Set3">Set3
                                 <div class="main-set">
                                     <p class="main-commend"> 추천 대상 : 점심/저녁 영업을 강조하고 싶은 경우, 정면각으로 찍은 메뉴 사진이 있는 경우</p>
                                     <img class="mobile" src="img/main-set3-mobile.png" alt="main-set3-mobile">
@@ -111,7 +113,7 @@
                                         - 좌우 영역에 들어갈 10자이내 텍스트 2가지 (Ex.점심에는 식사, 저녁에는 술안주)<br>
                                     </p>
                                 </div>
-                            <input type="radio" name="main-style" value="Set4">Set4
+                            <input type="radio" name="main" value="Set4">Set4
                                 <div class="main-set">
                                     <p class="main-commend"> 추천 대상 : 상호명보다 특징을 강조하고 싶은 경우, 누끼 대표메뉴 이미지가 있는 경우</p>
                                     <img class="mobile" src="img/main-set4-mobile.png" alt="main-set4-mobile">
@@ -128,7 +130,7 @@
                                         - 메인텍스트 아래에 들어가는 서브 텍스트 (ex. ~에서 창업주분들을 모집합니다)<br>
                                     </p>
                                 </div>
-                            <input type="radio" name="main-style" value="Set5">Set5
+                            <input type="radio" name="main" value="Set5">Set5
                                 <div class="main-set">
                                     <p class="main-commend"> 추천 대상 : 상호명과 특징만 심플하게 강조하고 싶은 경우</p>
                                     <img class="mobile" src="img/main-set5-mobile.png" alt="main-set5-mobile">
@@ -143,7 +145,7 @@
                                         - 좌측 상단에 넣을 심볼형 로고 <br>
                                     </p>
                                 </div>
-                            <input type="radio" name="main-style" value="Set6">Set6
+                            <input type="radio" name="main" value="Set6">Set6
                                 <div class="main-set">
                                     <p class="main-commend"> 추천 대상 : 대표사진과 특징을 강조하고 싶은 경우</p>
                                     <img class="mobile" src="img/main-set6-mobile.png" alt="main-set6-mobile">
@@ -158,26 +160,25 @@
                                         <br>
                                         선택사항<br>
                                         - 타이틀 상단에 넣을 심볼형 로고 <br>
-                                        <br>
                                     </p>
                                 </div>
-                            <div class="basic-text-end">
+                            <p class="basic-text-end">
                                 공통 유의사항<br>
                                 - 로고파일 제공시 일러스트레이터(확장자 ai) 또는 가로 500px 이상의 배경이 투명한 png파일<br>
                                 - 모든 사진 이미지는 2000px 이상의 원본 고화질로 제공하여야 함<br>
-                                - 스페이스바는 0.5자입니다.</p>
-                            </div>
+                                - 스페이스바는 0.5자입니다.
+                            </p>
                         </div>
                         <div class="btn">
-                            <button id="pre-btn" onclick="">previous</button>
-                            <button id="next-btn" onclick="">Next</button>
+                            <button id="pre-btn">previous</button>
+                            <button id="next-btn">Next</button>
                         </div>
                     </div>
                 </div>
                  <!-- 스티키 메뉴 -->
                 <div class="menu-area" style="display: none;">
                     <p class="title">Step3. 스티키 메뉴</p>
-                    <div class="menu-step3">
+                    <div id="menu-step3">
                         <div>
                             <input type="radio" name="sticky" value="yes">yes
                             <input type="radio" name="sticky" value="no">n
@@ -197,23 +198,21 @@
                     </div>
                 </div>
                 <!-- 폰트 선택 -->
-                <div class="menu-area" style="display: block;">
+                <div class="menu-area" style="display: none;">
                     <p class="title">Step4. 폰트 선택</p>
-                    <div class="menu-step4">
+                    <div id="menu-step4">
                         <div>
-                            <input type="radio" name="font" value="">
-                            <input type="radio" name="fonr" value="">
-                            <input type="radio" name="font" value="">
-                            <input type="radio" name="fonr" value="">
-                            <input type="radio" name="font" value="">
-                            <input type="radio" name="fonr" value="">
-                            <input type="radio" name="font" value="">
-                            <input type="radio" name="fonr" value="">
-                            <input type="radio" name="font" value="">
-                            <input type="radio" name="fonr" value="">
-                            <input type="radio" name="font" value="">
-                            <input type="radio" name="fonr" value="">
-                            <input type="radio" name="fonr" value="">
+                            <input type="radio" name="font" value="둥글둥글함"><img id="font-img" src="img/font-둥글둥글함.png" alt="둥글둥글함"><br>
+                            <input type="radio" name="font" value="딱딱함"><img id="font-img" src="img/font-딱딱함.png" alt="딱딱함"><br>
+                            <input type="radio" name="font" value="견고함"><img id="font-img" src="img/font-견고함.png" alt="견고함"><br>
+                            <input type="radio" name="font" value="살짝 귀여운"><img id="font-img" src="img/font-살짝귀여운.png" alt="살짝귀여운"><br>
+                            <input type="radio" name="font" value="약간 삐죽"><img id="font-img" src="img/font-약간삐쭉.png" alt="약간삐죽"><br>
+                            <input type="radio" name="font" value="나뉘어진"><img id="font-img" src="img/font-나뉘어진.png" alt="나뉘어진"><br>
+                            <input type="radio" name="font" value="세련된"><img id="font-img" src="img/font-세련된.png" alt="세련된"><br>
+                            <input type="radio" name="font" value="전통적인"><img id="font-img" src="img/font-전통적인.png" alt="전통적인"><br>
+                            <input type="radio" name="font" value="전통적인1"><img id="font-img" src="img/font-전통적인-1.png" alt="전통적인1"><br>
+                            <input type="radio" name="font" value="거대한"><img id="font-img" src="img/font-거대한.png" alt="거대한"><br>
+                            <input type="radio" name="font" value="옛스러운"><img id="font-img" src="img/font-옛스러운.png" alt="옛스러운"><br>
                         </div>
                         <div class="btn">
                             <button id="pre-btn" onclick="">previous</button>
@@ -223,8 +222,37 @@
                 </div>
                  <!-- 스타일 선택 -->
                 <div class="menu-area" style="display: none;">
-                    <p class="title">Step5. 스타일</p>
-                    <div class="menu-step5">
+                    <p class="title">Step5. 레이아웃 선택</p>
+                    <div id="menu-step5">
+                        <p class="basic-text-end">
+                            *배경색은 랜딩페이지에서 각 영역이 구분되고 각 내용에 맞게 어우러질 수 있도록 당사 디자이너가 적절히 패턴, 로고 활용 등 조정하여 들어갑니다.
+                        </p>
+                        <div>
+                            <input type="radio" name="layout" value="Set1">Set1
+                                <div class="layout-set">
+                                    <img class="layout-img" src="img/layout-set1.png" alt="layout-set1"><br>
+                                    <img class="layout-img" src="img/layout-set1-1.png" alt="layout-set1-1">
+                                    <p class="basic-text"> 필수 사항 등등 </p>
+                                </div>
+                            <input type="radio" name="layout" value="Set1">Set2
+                                <div class="layout-set">
+                                    <img class="layout-img" src="img/layout-set2.png" alt="layout-set2"><br>
+                                    <img class="layout-img" src="img/layout-set2-1.png" alt="layout-set2-1">
+                                    <p class="basic-text"> 필수 사항 등등 </p>
+                                </div>
+                            <input type="radio" name="layout" value="Set1">Set3
+                                <div class="layout-set">
+                                    <img class="layout-img" src="img/layout-set3.png" alt="layout-set3"><br>
+                                    <img class="layout-img" src="img/layout-set3-1.png" alt="layout-set3-1">
+                                    <p class="basic-text-end"> 필수 사항 등등 </p>
+                                </div>
+                        </div>
+                        <p class="basic-text-end">
+                            공통 유의사항<br>
+                            - 로고파일 제공시 일러스트레이터(확장자 ai) 또는 가로 500px 이상의 배경이 투명한 png파일<br>
+                            - 모든 사진 이미지는 2000px 이상의 원본 고화질로 제공하여야 함<br>
+                            - 스페이스바는 0.5자입니다.
+                        </p>
                         <div class="btn">
                             <button id="pre-btn" onclick="">previous</button>
                             <button id="next-btn" onclick="">Next</button>
@@ -234,7 +262,23 @@
                  <!-- 구성 선택 -->
                 <div class="menu-area" style="display: none;">
                     <p class="title">Step6. 구성</p>
-                    <div class="menu-step6">
+                    <div id="menu-step6">
+                        <p class="basic-text-end">
+                            *폰트, 배경, 글자색등은 앞선 선택에 따라 통일성 있게 반영되는 부분으로  아래의 예시화면과 같지 않습니다.<br>
+                            *보유하신 자료에 따라  가능하신 구성을 선택하시면 됩니다.
+                        </p>
+                        <div class="">
+                            영수증
+                        </div>
+                        <div class="">
+                            특징
+                        </div>
+                        <div class="">
+                            메뉴
+                        </div>
+                        <div class="">
+                            기타
+                        </div>
                         <div class="btn">
                             <button id="pre-btn" onclick="">previous</button>
                             <button id="next-btn" onclick="">Next</button>
