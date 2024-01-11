@@ -50,6 +50,7 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 #form-page .menu-box .menu-text .click{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -58,6 +59,10 @@
     line-height: 20px;
     color: #319ff8;
     flex-wrap: wrap;
+}
+#form-page .end{
+    border-bottom: 1px solid #ddd;
+    clear: both;
 }
 
 /* form-box style */
@@ -72,7 +77,7 @@
     line-height: 20px;
     text-align: center;
     color: #444444;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
@@ -82,29 +87,69 @@
     font-size: 15px;
     line-height: 20px;
     color: #444444;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-bottom: 20px;
+    text-align: center;
 }
+#form-page .btn{
+    clear: both;
+}
+
+/* step */
+#form-page .menu-step {
+  width : 90%;
+  display: inline-block;
+  overflow: hidden;
+}
+#form-page .menu-step p{
+    text-align: left;
+}
+
+/* step4 - font-radio */
+#form-page .font-radio-set{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 50px;
+}
+#form-page .radio-set{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 50px;
+    float: left;
+    clear: both;
+}
+#form-page #step3 .sticky-img{
+    display: inline-block;
+    overflow: hidden;
+  }
+
 #form-page .form-box .main-set {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;
     text-align: center;
 }
-#form-page .form-box .layout-set {
+#form-page .form-box .main-set .main-commend {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: normal;
-    font-size: 13px;
+    font-weight: bold;
     text-align: center;
 }
+#form-page .form-box .layout-set {
+    text-align: center;
+    clear: both;
+}
+
+/* text style */
 #form-page .basic-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;
-    line-height: 20px;
+    line-height: 18px;
     color: #656565;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
 }
 #form-page .basic-text-end {
@@ -114,18 +159,15 @@
     line-height: 20px;
     color: #656565;
     flex-wrap: wrap;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-}
-#form-page .form-box .main-set .main-commend {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: bold;
+    clear: both;
 }
 
 /* input-box style */
-#form-page .form-box .menu-area #input-box {
+#form-page .form-box .menu-area .input-box {
     width: 100%;
     height: 30px;
     border-top: none;
@@ -150,35 +192,43 @@ input:focus {
 }
 
 /* 스티키 이미지 */
-#menu-step3 #mobile {
+#step3 .mobile {
     width: 200px;
     height: 50px;
     object-fit: contain;
 }
 
-#menu-step3 #pc {
+#step3 .pc {
     width: 700px;
     height: 50px;
     object-fit: contain;
 }
+#step3 .sticky {
+    width: 90%;
+    object-fit: contain;
+    float: left;
+    display: block;
+}
 
 /* 폰트 이미지 */
-#menu-step4 #font-img {
+#step4 .font-img {
     width: 100px;
     height: 30px;
     object-fit: contain;
     
 }
 /* 레이아웃 이미지 */
-#menu-step5 .layout-img {
+#step5 .layout-img-set {
     width: 300px;
     height: 100px;
     object-fit: contain;
-    
+}
+#step5 .layout-img {
+   float: left;  
 }
 
 /* button style */
-#form-page .form-box #next-btn1 {
+#form-page .form-box .next-btn {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;
@@ -190,8 +240,9 @@ input:focus {
     border-radius: 100px;
     border: none;
     float: right;
+    cursor: pointer;
 }
-#form-page .form-box #pre-btn {
+#form-page .form-box .pre-btn {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 13px;
@@ -203,6 +254,7 @@ input:focus {
     border-radius: 100px;
     border: none;
     float: left;
+    cursor: pointer;
 }
 
 

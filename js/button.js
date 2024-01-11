@@ -16,9 +16,17 @@ $(document).ready(function(){
 function next(idx){
     $(".form-box .menu-area").hide();
     $(".form-box .menu-area").eq(idx + 1).show();
+
+    //Menu Event
+    $(".menu-box .menu").removeClass("click");
+    $(".menu-box .menu").eq(idx + 1).addClass("click");
 }
 
 function prev(idx){
     $(".form-box .menu-area").hide();
     $(".form-box .menu-area").eq(idx - 1).show();
+
+    //Menu Event
+    $(".menu-box .menu").removeClass("click");
+    $(".menu-box .menu").eq(idx - 1).addClass("click");
 }
