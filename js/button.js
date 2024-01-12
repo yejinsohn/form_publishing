@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $(".menu-box .menu").click(function (){
         var index = $(this).index();
