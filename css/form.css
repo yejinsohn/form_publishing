@@ -67,7 +67,7 @@
 
 /* form-box style */
 #form-page .form-box {
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 #form-page .form-box .title {
@@ -140,6 +140,12 @@
     text-align: center;
     clear: both;
 }
+#form-page .form-box .layout-detail {
+    float: right;
+    width: 650px;
+    height: 130px;
+    clear: both;
+}
 
 /* text style */
 #form-page .basic-text {
@@ -192,19 +198,8 @@ input:focus {
 }
 
 /* 스티키 이미지 */
-#step3 .mobile {
-    width: 200px;
-    height: 50px;
-    object-fit: contain;
-}
-
-#step3 .pc {
-    width: 700px;
-    height: 50px;
-    object-fit: contain;
-}
 #step3 .sticky {
-    width: 90%;
+    width: 80%;
     object-fit: contain;
     float: left;
     display: block;
@@ -220,11 +215,13 @@ input:focus {
 /* 레이아웃 이미지 */
 #step5 .layout-img-set {
     width: 300px;
-    height: 100px;
+    height: 130px;
     object-fit: contain;
+    clear: both;
 }
 #step5 .layout-img {
-   float: left;  
+    display: inline-block;
+    clear: both;
 }
 
 /* button style */
