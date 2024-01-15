@@ -15,7 +15,7 @@ html, body {
 }
 #form-page {
     background-color: #edf0f2;
-    padding: 80px 0;
+    padding: 50px 0;
     overflow: hidden;
 }
 #form-page .main-container {
@@ -30,13 +30,7 @@ html, body {
     padding: 20px;
     border-radius: 20px;
 }
-
-/* menu-box style */
-#form-page .menu-box {
-    width: 10%;
-    height: 30%;
-}
-#form-page .menu-box .title {
+#form-page .title {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
     font-size: 18px;
@@ -46,6 +40,12 @@ html, body {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
+}
+
+/* menu-box style */
+#form-page .menu-box {
+    width: 13%;
+    height: 30%;
 }
 #form-page .menu-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -66,27 +66,13 @@ html, body {
     color: #319ff8;
     flex-wrap: wrap;
 }
-#form-page .end{
-    border-bottom: 1px solid #ddd;
-    clear: both;
-}
 
 /* form-box style */
 #form-page .form-box {
     width: 60%;
     height: auto;
 }
-#form-page .form-box .title {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 20px;
-    text-align: center;
-    color: #444444;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-}
+
 #form-page .form-box .menu-area {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
@@ -94,11 +80,8 @@ html, body {
     line-height: 20px;
     color: #444444;
     margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-align: center;
-}
-#form-page .btn{
-    clear: both;
 }
 
 /* step */
@@ -127,6 +110,13 @@ html, body {
     clear: both;
     width: 100%;
 }
+#step6 .const {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    margin: 5px;
+}
+
 #form-page #step3 .sticky-img{
     display: inline-block;
     overflow: hidden;
@@ -148,12 +138,14 @@ html, body {
     clear: both;
 }
 
-#form-page .form-box .receipt-style {
+#form-page .form-box .const-select {
     margin-bottom: 10px;
+    text-align: center;
 }
 #form-page .form-box .receipt-set {
     clear: both;
 }
+
 /* text style */
 #form-page .basic-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -175,6 +167,20 @@ html, body {
     margin-bottom: 10px;
     padding-bottom: 10px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+}
+#form-page .const-basic-text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #656565;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#form-page .end{
     border-bottom: 1px solid #ddd;
     clear: both;
 }
@@ -227,18 +233,19 @@ input:focus {
     clear: both;
 }
 
-#step6 .const {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
+.const-select .mobile {
+    width: 15%;
+    height: 50%;
+    object-fit: contain;
 }
-/* 영수증 이미지 */
-#step6 .const-img {
+
+.const-select .basic {
     width: 50%;
     height: 50%;
     object-fit: contain;
     clear: both;
 }
+
 /* button style */
 #form-page .form-box .next-btn {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';

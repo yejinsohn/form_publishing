@@ -70,7 +70,6 @@
                                 <div class="radio-set">
                                     <input type="radio" name="main" value="Set1">Set1
                                 </div>
-                                <br>
                                 <p class="main-commend"> 추천 대상 : 당사 로고가 없는 경우, 대표메뉴 사진을 강조하고 싶은 경우, 
                                     넣고싶은 수식어가 많은 경우, 강조하고 싶은 키워드가 있는 경우</p>
                                 <div>
@@ -93,8 +92,7 @@
                             <div class="main-set">
                                 <div class="radio-set">
                                     <input type="radio" name="main" value="Set2">Set2
-                            </div>
-                                <br>
+                                </div>
                                 <p class="main-commend"> 추천 대상 : 로고(상호명)을 강조하고 싶은 경우, 대표메뉴 하나를 강조하고 싶은 경우</p>
                                 <div>
                                     <img class="mobile" src="img/main-set2-mobile.png" alt="main-set2-mobile">
@@ -112,7 +110,6 @@
                                 <div class="radio-set">
                                     <input type="radio" name="main" value="Set3">Set3
                                 </div>
-                                <br>
                                 <p class="main-commend"> 추천 대상 : 점심/저녁 영업을 강조하고 싶은 경우, 정면각으로 찍은 메뉴 사진이 있는 경우</p>
                                 <div>
                                     <img class="mobile" src="img/main-set3-mobile.png" alt="main-set3-mobile">
@@ -134,7 +131,6 @@
                                 <div class="radio-set">
                                     <input type="radio" name="main" value="Set4">Set4
                                 </div>
-                                <br>
                                 <p class="main-commend"> 추천 대상 : 상호명보다 특징을 강조하고 싶은 경우, 누끼 대표메뉴 이미지가 있는 경우</p>
                                 <div>
                                     <img class="mobile" src="img/main-set4-mobile.png" alt="main-set4-mobile">
@@ -156,7 +152,6 @@
                                 <div class="radio-set">
                                     <input type="radio" name="main" value="Set5">Set5
                                 </div>
-                                <br>
                                 <p class="main-commend"> 추천 대상 : 상호명과 특징만 심플하게 강조하고 싶은 경우</p>
                                 <div>
                                     <img class="mobile" src="img/main-set5-mobile.png" alt="main-set5-mobile">
@@ -176,7 +171,6 @@
                                 <div class="radio-set">
                                     <input type="radio" name="main" value="Set6">Set6
                                 </div>
-                                <br>
                                 <p class="main-commend"> 추천 대상 : 대표사진과 특징을 강조하고 싶은 경우</p>
                                 <div>
                                     <img class="mobile" src="img/main-set6-mobile.png" alt="main-set6-mobile">
@@ -367,142 +361,469 @@
                             <div class="const">
                                 <input type="checkbox" id="feature" name="const" value="feature" onchange="setFeature()"> 특징 선택
                                 <div id="const-feature" style="display: none;">
-                                    <div>특징 선택 항목</div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="feature1">set1
+                                        </div>
+                                        <img class="mobile" src="img/const-feature-mobile.png" alt="const-feature-mobile">
+                                        <img class="basic" src="img/const-feature.png" alt="const-feature">
+                                        <div class="basic-text">
+                                            추천대상: 여러가지 특징을 상세하게 글로 설명하고 싶은 경우(2개이상부터 가능)<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 각 특징에 맞는 이미지 제공 (1000px 이상의 고해상도) <br>
+                                            - 15자 이내의 각 특징 제목<br>
+                                            - 150자 이내의 각 특징 설명
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="feature2">set2
+                                        </div>
+                                        <img class="mobile" src="img/const-feature2-mobile.png" alt="const-feature2-mobile">
+                                        <img class="basic" src="img/const-feature2.png" alt="const-feature2">
+                                        <div class="basic-text">
+                                            추천대상: 사진과 짧은 설명글이 있는 경우(2~4개)<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 각 특징에 맞는 이미지<br>
+                                            - 25자 이내의 제목<br>
+                                            - 50자 이내의 설명<br>
+                                            *강조할 부분은 ‘와 ‘ 사이에 적어주시면 됩니다.
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="feature3">set3
+                                        </div>
+                                        <img class="mobile" src="img/const-feature3-mobile.jpg" alt="const-feature3-mobile">
+                                        <img class="basic" src="img/const-feature3.png" alt="const-feature3">
+                                        <div class="basic-text">
+                                            추천대상: 단어로 된 여러 특징을 간단히 설명하고 싶은데 하나하나 매칭되는 이미지가 없는 경우(3~9개)<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 가운데 들어갈 경계가 깔끔한 누끼 이미지(1000px 이상 고화질)<br>
+                                            - 각 키워드 (3개~ 9개)
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="feature4">set4
+                                        </div>
+                                        <img class="mobile" src="img/const-feature4-mobile.png" alt="const-feature4-mobile">
+                                        <img class="basic" src="img/const-feature4.png" alt="const-feature4">
+                                        <div class="basic-text">
+                                            추천대상: 가운데 넣을 세로로 긴 모델이미지가 있는 경우(4개)<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 일정한 느낌과 사이즈의 메뉴 고화질 사진(가로 1000px 이상)<br>
+                                            - 30자이내의 각 특징 4가지. 강조할 부분은 ‘ ‘ 안에<br>
+                                            - (선택) 하단에 넣을 텍스트
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="feature5">set5
+                                        </div>
+                                        <img class="mobile" src="img/const-feature5-mobile.png" alt="const-feature5-mobile">
+                                        <img class="basic" src="img/const-feature5.png" alt="const-feature5">
+                                        <div class="basic-text">
+                                            추천대상: 사진과 설명글이 있는 경우(4개)<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 각 특징에 맞는 이미지
+                                            - 25자 이내의 제목
+                                            - 60자 이내의 설명
+                                            * 강조할 부분은 ‘와 ‘ 사이에 적어주시면 됩니다.
+                                        </div>
+                                        <div class="end"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="const">
                                 <input type="checkbox" id="menu-intro" name="const" value="menu-intro" onchange="setMenu()"> 메뉴 소개 선택
                                 <div id="const-menu" style="display: none;">
-                                    <div>메뉴 선택 항목</div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="menu-intro" value="set1">Set1
+                                        </div>
+                                        <div class="const-select">
+                                            <img class="mobile" src="img/const-menu1-mobile.png" alt="menu1-mobile">
+                                            <img class="basic" src="img/const-menu1.png" alt="menu1">
+                                        </div>
+                                        <div class="basic-text">
+                                            추천대상: 메인, 사이드 메뉴가 나뉘어져 있는 경우<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 일정한 느낌과 사이즈의 메뉴 고화질 사진(가로 1000px 이상)<br>
+                                            - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기(스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                            - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                            (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="menu-intro" value="set2">Set2
+                                        </div>
+                                        <div class="const-select">
+                                            <img class="mobile" src="img/const-menu2-mobile.png" alt="menu2-mobile">
+                                            <img class="basic" src="img/const-menu2.png" alt="menu2">
+                                        </div>
+                                        <div class="basic-text">
+                                            추천대상: 메뉴 가짓수가 적은 경우<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 일정한 각도로 촬영한 고화질 메뉴 사진의 누끼(가로 1000px 이상)<br>
+                                            (누끼 딴 png 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                            - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                            (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                            - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                            (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="menu-intro" value="set3">Set3
+                                        </div>
+                                        <div>
+                                            <img class="basic" src="img/const-menu3.png" alt="menu3">
+                                        </div>
+                                        <div class="basic-text">
+                                            추천대상: 메뉴 품목이 특화되어 가짓수가 적은 경우, 메뉴개별 설명보다 묶여진 카테고리가 중요한 경우<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 일정한 각도로 촬영하였으며 배경이 투명한 1000px이상의 경계가 깔끔한 누끼 png <br>
+                                            (누끼작업요청시 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)
+                                            - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                            (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                            - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                            (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="menu-intro" value="set4">Set4
+                                        </div>
+                                        <div>
+                                            <img class="mobile" src="img/const-menu4-mobile.png" alt="menu4-mobile">
+                                            <img class="basic" src="img/const-menu4.png" alt="menu4">
+                                        </div>
+                                        <div class="basic-text">
+                                            추천대상: 메뉴하나하나를 강조하고 싶은 경우, 카테고리가 나뉜 경우<br>
+                                            pc에서는 임팩트 있으나, 모바일에선 반대로 작용<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 일정한 각도로 촬영하였으며 배경이 투명한 1000px이상의 경계가 깔끔한 누끼 png<br>
+                                            - 누끼 요청시 10만원 추가비용(누끼 작업에 방해되는 장식물 없이 형태가 깔끔한 이미지만 가능-장식물이 음식과 떨어져있으면 O, 음식 앞을 가리고 있으면 X)<br>
+                                            - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                            (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )
+                                            - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                            (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="menu-intro" value="set5">Set5
+                                        </div>
+                                        <div>
+                                            <img class="mobile" src="img/const-menu5-mobile.png" alt="menu5-mobile">
+                                            <img class="basic" src="img/const-menu5.png" alt="menu5">
+                                        </div>
+                                        <div class="basic-text">
+                                            추천대상: 메뉴하나하나를 강조하고 싶은 경우, 카테고리가 나뉜 경우<br>
+                                            pc에서는 임팩트 있으나, 모바일에선 반대로 작용<br>
+                                            <br>
+                                            필요자료: <br>
+                                            - 비슷한 느낌의 각 메뉴 고화질 사진들 (2000px 이상)<br>
+                                            - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 8자이내 표기<br>
+                                            (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )
+                                            - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                            (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))<br>
+                                            - 각 메뉴 설명 30자 이내 (생략 가능)
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="menu-intro" value="set6">Set6
+                                        </div>
+                                        <div>
+                                            <img class="mobile" src="img/const-menu6-mobile.png" alt="menu6-mobile">
+                                            <img class="basic" src="img/const-menu6.png" alt="menu6">
+                                        </div>
+                                        <div class="basic-text">
+                                            추천대상: 메뉴이름이 스페이스바포함 7자 이내로 짧은 경우, 음식사진 보다 종류 소개가 중요한 경우<br>
+                                            <br>
+                                            필요자료:<br>
+                                            - 일정한 각도로 촬영한 고화질 사진(가로 1000px 이상)<br>
+                                            - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                            (레이아웃 특성상 공간이 적으므로 스페이스바 포함 7자이내여야 함)<br>
+                                            (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                            - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                            (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                        </div>
+                                        <div class="end"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="const">
                                 <input type="checkbox" id="receipt" name="const" value="receipt" onchange="setReceipt()"> 영수증 선택
                             <div id="const-receipt" style="display: none;">
-                                <div class="receipt-style">
+                                <div class="const-select">
                                     <div class="radio-set">
                                         <input type="radio" name="receipt" value="set1">Set1-자동 슬라이드(일매출, 월매출, 배달매출 추가 가능)
                                     </div>
                                     <div class="receipt-img-set">
-                                        <img class="const-img" src="img/receipt-set1.png" alt="receipt-set1">
+                                        <img class="basic" src="img/receipt-set1.png" alt="receipt-set1">
                                     </div>
                                 </div>
-                                <div class="receipt-style">
+                                <div class="const-select">
                                     <div class="radio-set">
                                         <input type="radio" name="receipt" value="set2">Set2-좌우버튼, 월매출, 배달매출추가가능
                                     </div>
                                     <div class="receipt-img-set">
-                                        <img class="const-img" src="img/receipt-set2.png" alt="receipt-set2">
+                                        <img class="basic" src="img/receipt-set2.png" alt="receipt-set2">
                                     </div>
                                 </div> 
-                                <div class="receipt-style">
+                                <div class="const-select">
                                     <div class="radio-set">
                                         <input type="radio" name="receipt" value="set3">Set3-월매출+일매출 모두 노출, 배달매출 추가가능, 페이지네이션
                                     </div>
                                     <div class="receipt-img-set">
-                                        <img class="const-img" src="img/receipt-set3.png" alt="receipt-set3">
+                                        <img class="basic" src="img/receipt-set3.png" alt="receipt-set3">
                                     </div>
+                                    <div class="end"></div>
                                 </div>   
                             </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="graph" name="const" value="graph" onchange="setGraph()">그래프 선택
+                                <input type="checkbox" id="graph" name="const" value="graph" onchange="setGraph()"> 그래프 선택
                                 <div id="const-graph" style="display: none;">
-                                    <div>그래프 선택 항목</div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="piegraph">원형 그래프
+                                        </div>
+                                        <img class="basic" src="img/const-graph-pie.png" alt="const-graph-pie">
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="columngraph">막대 그래프
+                                        </div>
+                                        <img class="basic" src="img/const-graph-column.png" alt="const-graph-column">
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="growthgraph">성장 그래프
+                                        </div>
+                                        <img class="basic" src="img/const-graph-growth.png" alt="const-graph-growth">
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="checkbox" value="cost">단가 비교
+                                        </div>
+                                        <img class="basic" src="img/const-cost.png" alt="const-cost">
+                                        <div class="end"></div>
+                                    </div>
                                 </div>
                             </div> 
                             <div class="const">
-                                <input type="checkbox" id="youtube" name="const" value="youtube" onchange="setYoutube()">유튜브 영상 재생
+                                <input type="checkbox" id="youtube" name="const" value="youtube" onchange="setYoutube()"> 유튜브 영상 재생
                                 <div id="const-youtube" style="display: none;">
-                                    <div class="youtube-img-set">
+                                    <div class="const-select">
                                         <div class="radio-set">
                                             <input type="radio" name="youtube" value="set1">Set1
                                         </div>
-                                        <img class="const-img" src="img/const-youtube.png" alt="const-youtube">
+                                        <img class="basic" src="img/const-youtube.png" alt="const-youtube">
                                     </div>
-                                    <div class="youtube-img-set">
+                                    <div class="const-select">
                                         <div class="radio-set">
                                             <input type="radio" name="youtube" value="set2">Set2-전체화면
                                         </div>
-                                        <img class="const-img" src="img/const-youtube1.png" alt="const-youtube1">
+                                        <img class="basic" src="img/const-youtube1.png" alt="const-youtube1">
                                     </div>
-                                    <div class="basic-text">
+                                    <div class="const-basic-text">
                                         필요자료 : 1920HD 영상 
                                     </div>
+                                    <div class="end"></div>
                                 </div>
                             </div> 
                             <div class="const">
-                                <input type="checkbox" id="media" name="const" value="media" onchange="setMedia()">미디어노출캡쳐슬라이드
+                                <input type="checkbox" id="media" name="const" value="media" onchange="setMedia()"> 미디어노출캡쳐슬라이드
                                 <div id="const-media" style="display: none;">
-                                    <img class="const-img" src="img/const-media.png" alt="const-media">
-                                    <div class="basic-text">
+                                    <div class="const-select">
+                                        <img class="basic" src="img/const-media.png" alt="const-media">
+                                    </div>
+                                    <div class="const-basic-text">
                                         필요자료 : 2000px 이상의 고화질 캡쳐 이미지, 간단한 설명(선택)  
                                     </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="interior" name="const" value="interior" onchange="setInterior()">인테리어 사진 슬라이드
+                                <input type="checkbox" id="interior" name="const" value="interior" onchange="setInterior()"> 인테리어 사진 슬라이드
                                 <div id="const-interior" style="display: none;">
-                                    <img class="const-img" src="img/const-interior.png" alt="const-interior">
-                                    <div class="basic-text">
+                                    <div class="const-select">
+                                        <img class="basic" src="img/const-interior.png" alt="const-interior">
+                                    </div>
+                                    <div class="const-basic-text">
                                         필요자료 : 2000px 이상의 고화질 사진  
+                                    </div>
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                            <div class="const">
+                                <input type="checkbox" id="blog" name="const" value="blog" onchange="setBlog()"> 블로그 후기
+                                <div id="const-blog" style="display: none;">
+                                    <div class="const-select">
+                                        <img class="basic" src="img/const-blog.png" alt="const-blog">
                                     </div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="blog" name="const" value="blog" onchange="setBlog()">블로그 후기
-                                <div id="const-blog" style="display: none;">
-                                    <img class="const-img" src="img/const-blog.png" alt="const-blog">
-                                </div>
-                            </div>
-                            <div class="const">
-                                <input type="checkbox" id="review" name="const" value="review" onchange="setReview()">배달앱 리뷰
+                                <input type="checkbox" id="review" name="const" value="review" onchange="setReview()"> 배달앱 리뷰
                                 <div id="const-review" style="display: none;">
-                                    <div>
+                                    <div class="const-select">
                                         <div class="radio-set">
                                             <input type="radio" name="review" value="set1">Set1
                                         </div>
-                                        <img class="const-img" src="img/const-review.png" alt="const-review">
+                                        <img class="basic" src="img/const-review.png" alt="const-review">
                                     </div>
-                                    <div>
+                                    <div class="const-select">
                                         <div class="radio-set">
                                             <input type="radio" name="review" value="set2">Set2
                                         </div>
-                                        <img class="const-img" src="img/const-review1.png" alt="const-review1">
+                                        <img class="basic" src="img/const-review1.png" alt="const-review1">
                                     </div>
-                                    <div class="basic-text">
-                                        필요자료 : 
+                                    <div class="const-basic-text">
+                                        필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
+                                        - 내용길이가 비슷한 리뷰들로 캡쳐 요망(들쑥날쑥져서 비어 보임)
                                     </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="insta" name="const" value="insta" onchange="setInsta()">인스타 마케팅
+                                <input type="checkbox" id="insta" name="const" value="insta" onchange="setInsta()"> 인스타 마케팅
                                 <div id="const-insta" style="display: none;">
-                                    인스타 마케팅
+                                    <div class="const-select">
+                                        <img class="mobile" src="img/const-insta-mobile.png" alt="const-insta-mobile">
+                                        <img class="basic" src="img/const-insta.png" alt="const-insta">
+                                    </div>
+                                    <div class="const-basic-text">
+                                        필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
+                                        - 내용길이가 비슷하게 캡쳐 요망(길면 잘림)
+                                    </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="affiliate" name="const" value="affiliate" onchange="setAffiliate()">가맹점 소개-가맹절차
+                                <input type="checkbox" id="affiliate" name="const" value="affiliate" onchange="setAffiliate()"> 가맹점 소개
                                 <div id="const-affiliate" style="display: none;">
-                                    가맹점
+                                    <div class="const-select">
+                                        <img class="basic" src="img/const-affiliate.png" alt="const-affiliate">
+                                        <img class="basic" src="img/const-affiliate-pre.png" alt="const-affiliate-pre">
+                                    </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="franchise" name="const" value="franchise" onchange="setFranchise()">프렌차이즈 소개
+                                <input type="checkbox" id="affiliate-step" name="const" value="affiliate-step" onchange="setAffiliateStep()"> 가맹절차
+                                <div id="const-affiliate-step" style="display: none;">
+                                    <div>
+                                        <div class="const-select">
+                                            <div class="radio-set">
+                                                <input type="radio" name="affiliate-step" value="set1">Set1-8개 가맹절차(간단한 소개)
+                                                <div>
+                                                    <img class="basic" src="img/const-step.png" alt="const-affiliate-step">
+                                                </div>
+                                                <div class="basic-text">
+                                                    - 10자이내 단계별 제목과 25자 이내의 설명
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="const-select">
+                                            <div class="radio-set">
+                                                <input type="radio" name="affiliate-step" value="set2">Set2-8개 가맹절차
+                                                <div>
+                                                    <img class="basic" src="img/const-step1.png" alt="const-affiliate-step1">
+                                                </div>
+                                                <div class="basic-text">
+                                                    - 10자이내 단계별 제목
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="const-select">
+                                            <div class="radio-set">
+                                                <input type="radio" name="affiliate-step" value="set3">Set3-6개 가맹절차
+                                                <div>
+                                                    <img class="basic" src="img/const-step2.png" alt="const-affiliate-step2">
+                                                </div>
+                                                <div class="basic-text">
+                                                    - 10자이내 단계별 제목
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="const-select">
+                                            <div class="radio-set">
+                                                <input type="radio" name="affiliate-step" value="set4">Set4-6개 가맹절차
+                                                <div>
+                                                    <img class="basic" src="img/const-step3.png" alt="const-affiliate-step3">
+                                                </div>
+                                                <div class="basic-text">
+                                                    - 10자이내 단계별 제목과 25자 이내의 설명
+                                                </div>
+                                                <div class="end"></div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="const">
+                                <input type="checkbox" id="franchise" name="const" value="franchise" onchange="setFranchise()"> 프렌차이즈 소개
                                 <div id="const-franchise" style="display: none;">
-                                    프랜차이즈
+                                    <div class="const-select">
+                                        <img class="mobile" src="img/const-franchise-mobile.png" alt="const-franchise-mobile">
+                                        <img class="basic" src="img/const-franchise.png" alt="const-franchise">
+                                    </div>
+                                    <div class="const-basic-text">
+                                        필요자료 : 각 로고 500px 이상의 이미지(배경이 투명한 png일수록 활용도가 더 좋음) 
+                                    </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="price" name="const" value="price" onchange="setPrice()">비용
+                                <input type="checkbox" id="price" name="const" value="price" onchange="setPrice()"> 비용
                                 <div id="const-price" style="display: none;">
-                                    비용
+                                    <div class="const-select">
+                                        <img class="basic" src="img/const-price.png" alt="const-price">
+                                    </div>
+                                    <div class="const-basic-text">
+                                        * 주신 화면에 따라 테이블, 칸 등 변경 가능
+                                    </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                             <div class="const">
-                                <input type="checkbox" id="contact" name="const" value="contact" onchange="setContact()">상담신청
+                                <input type="checkbox" id="contact" name="const" value="contact" onchange="setContact()"> 상담신청
                                 <div id="const-contact" style="display: none;">
-                                상담신청
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="contact" value="set1">Set1-상담신청
+                                        </div>
+                                        <div >
+                                            <img class="basic" src="img/const-contact.png" alt="const-contact">
+                                        </div>
+                                    </div>
+                                    <div class="const-select">
+                                        <div class="radio-set">
+                                            <input type="radio" name="contact" value="set2">Set2-상담신청 하단 스티키
+                                        </div>
+                                        <div >
+                                            <img class="basic" src="img/const-contact-sticky.png" alt="const-contact-sticky">
+                                        </div>
+                                    </div>
+                                    <div class="const-basic-text">
+                                        * 상단 스티키 메뉴, 상담신청 페이지, 상담신청 스티키 하단바 3개 중 1개 만 가능
+                                    </div>
+                                    <div class="end"></div>
                                 </div>
                             </div>
                         </div>

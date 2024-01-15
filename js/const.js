@@ -86,6 +86,14 @@ function setAffiliate(){
     }
 }
 
+function setAffiliateStep(){
+    if($('input:checkbox[id=affiliate-step]').is(':checked')){
+        $('#const-affiliate-step').show();
+    }else{
+        $('#const-affiliate-step').hide();
+    }
+}
+
 function setFranchise(){
     if($('input:checkbox[id=franchise]').is(':checked')){
         $('#const-franchise').show();
