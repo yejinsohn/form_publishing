@@ -84,7 +84,7 @@ html, body {
     text-align: center;
 }
 
-/* step */
+/* 단계별 세부 내용 */
 #form-page .menu-step {
   width : 90%;
   display: inline-block;
@@ -94,7 +94,7 @@ html, body {
     text-align: left;
 }
 
-/* step4 - font-radio */
+/* radio */
 #form-page .font-radio-set{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
@@ -116,7 +116,6 @@ html, body {
     text-align: left;
     margin: 5px;
 }
-
 #form-page #step3 .sticky-img{
     display: inline-block;
     overflow: hidden;
@@ -137,7 +136,6 @@ html, body {
 #form-page .form-box .layout-set {
     clear: both;
 }
-
 #form-page .form-box .const-select {
     margin-bottom: 10px;
     text-align: center;
@@ -200,13 +198,13 @@ input:focus {
 
 /* 메인 이미지 */
 .main-set .mobile {
-    width: 150px;
-    height: 300px;
+    width: 20%;
+    height: 40%;
     object-fit: cover;
 }
 .main-set .basic {
-    width: 500px;
-    height: 300px;
+    width: 60%;
+    height: 40%;
     object-fit: cover;
 }
 
@@ -227,21 +225,20 @@ input:focus {
 }
 /* 레이아웃 이미지 */
 #step5 .layout-img-set {
-    width: 300px;
-    height: 130px;
+    width: 60%;
     object-fit: contain;
     clear: both;
 }
 
 .const-select .mobile {
     width: 15%;
-    height: 50%;
+    height: 40%;
     object-fit: contain;
 }
 
 .const-select .basic {
     width: 50%;
-    height: 50%;
+    height: 40%;
     object-fit: contain;
     clear: both;
 }
