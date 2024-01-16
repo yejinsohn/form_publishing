@@ -23,11 +23,11 @@
             <article class="menu-box">
                 <p class="title">설문 단계</p>
                 <div class="menu-text">
-                    <p class="menu click">1. 기본 정보</p>
-                    <p class="menu">2. 메인 화면 선택</p>
-                    <p class="menu">3. 스티키 메뉴 추가</p>
-                    <p class="menu">4. 강조 폰트 키워드</p>
-                    <p class="menu">5. 레이아웃 선택</p>
+                    <p class="menu">1. 기본 정보</p>
+                    <p class="menu click">2. 메인 화면 선택</p>
+                    <p class="menu">3. 스티키 메뉴 추가 여부</p>
+                    <p class="menu">4. 강조 폰트 키워드 선택</p>
+                    <p class="menu">5. 타이틀 스타일 선택</p>
                     <p class="menu">6. 구성 선택</p>
                 </div>
             </article>
@@ -35,7 +35,7 @@
             <!-- 설문폼 -->
             <article class="form-box">
                 <!-- 기본 정보 -->
-                <div class="menu-area" style="display: block;">
+                <div class="menu-area" style="display: none;">
                     <p class="title">Step1. 기본 정보</p>
                     <div class="menu-step" id="step1">
                         <div>
@@ -51,9 +51,13 @@
                                 </div>
                                 <div>
                                     <p>컬러톤</p>
-                                        <input class="input-box" type="color">
+                                    <div class="input-color">
+                                        <input class="color-box" type="color" id="color-box-1" style="display: block;">
+                                        <input class="color-box" type="color" id="color-box-2" style="display: none;">
+                                        <input class="color-box" type="color" id="color-box-3" style="display: none;">
+                                        <div class="color-plus" onclick="setColorBox()"><img src="img/plus-icon.png"></div>
+                                    </div>
                                 </div>
-                                <p class="basic-text"></p>
                                 <div class="btn">
                                     <span class="next-btn" onclick="next(0)">Next</span>
                                 </div>
@@ -62,131 +66,152 @@
                     </div>
                 </div>
                  <!-- 메인 화면 선택 -->
-                <div class="menu-area" style="display: none;">
+                <div class="menu-area" style="display: block;">
                     <p class="title">Step2. 메인 화면 선택</p>
                     <div class="menu-step" id="step2">
                         <div>
                             <div class="main-set">
-                                <div class="radio-set">
-                                    <input type="radio" name="main" value="Set1">Set1
+                                <div class="radio-style">
+                                    <input type="radio" id="radio-1-1" name="main-radio" class="radio big-radio" value="Set1"/><label for="radio-1-1"></label>Set1<br/>                               
                                 </div>
-                                <p class="main-commend"> 추천 대상 : 당사 로고가 없는 경우, 대표메뉴 사진을 강조하고 싶은 경우, 
-                                    넣고싶은 수식어가 많은 경우, 강조하고 싶은 키워드가 있는 경우</p>
                                 <div>
-                                    <img class="mobile" src="img/main-set1-mobile.png" alt="main-set1-mobile">
-                                    <img class="basic" src="img/main-set1.png" alt="main-set1">
+                                    <p class="text-commend"> 추천 대상 : 당사 로고가 없는 경우, 대표메뉴 사진을 강조하고 싶은 경우, 
+                                        넣고싶은 수식어가 많은 경우, 강조하고 싶은 키워드가 있는 경우</p>
+                                    <div class="main-img">
+                                        <img class="mobile" src="img/main-set1-mobile.png" alt="main-set1-mobile">
+                                        <img class="basic" src="img/main-set1.png" alt="main-set1">
+                                    </div>
                                 </div>
-                                <p class="basic-text">
-                                    필수사항</br>
-                                    - 4~6자리 짝수 메인 텍스트(ex.상호명, 강조내용)<br>
-                                    - 강조하고 싶은 키워드 3~4개 (ex. 점심저녁평일주말)<br>
-                                    - 반듯하게 원형이 되게끔 정면각으로 찍은 대표 이미지 사진(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
-                                    - 깔끔한 배경사진<br>
-                                    <br>
-                                    선택사항<br>
-                                    - 원형 위에 들어가는 12자 이내의 서브 텍스트 1 (ex. 점심 저녁 장사 모두 붙잡은)<br>
-                                    - 20자 이내의 서브 텍스트 2 (ex. ~는 실패가 없습니다)<br>
-                                    - 로고 (상단 좌측에 들어가게 됩니다)<br>
-                                </p>
-                            </div>
-                            <div class="main-set">
-                                <div class="radio-set">
-                                    <input type="radio" name="main" value="Set2">Set2
-                                </div>
-                                <p class="main-commend"> 추천 대상 : 로고(상호명)을 강조하고 싶은 경우, 대표메뉴 하나를 강조하고 싶은 경우</p>
-                                <div>
-                                    <img class="mobile" src="img/main-set2-mobile.png" alt="main-set2-mobile">
-                                    <img class="basic" src="img/main-set2.png" alt="main-set2">
-                                </div>
-                                <p class="basic-text">
-                                    필수사항<br>
-                                    - 로고파일<br>
-                                    - 로고 위에 들어갈 10~30자 이내의 서브 텍스트<br>
-                                    - 로고 아래에 들어갈 비스듬히 찍은 대표 메뉴 사진(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
-                                    - 깔끔한 배경사진<br>
-                                </p>
-                            </div>
-                            <div class="main-set">
-                                <div class="radio-set">
-                                    <input type="radio" name="main" value="Set3">Set3
-                                </div>
-                                <p class="main-commend"> 추천 대상 : 점심/저녁 영업을 강조하고 싶은 경우, 정면각으로 찍은 메뉴 사진이 있는 경우</p>
-                                <div>
-                                    <img class="mobile" src="img/main-set3-mobile.png" alt="main-set3-mobile">
-                                    <img class="basic" src="img/main-set3.png" alt="main-set3">
-                                </div>
+                                <div class="" style="display: none;">
                                     <p class="basic-text">
-                                    필수사항<br>
-                                    - 로고 위에 들어갈 10~30자 이내의 서브 텍스트<br>
-                                    - 로고 아래에 들어갈 대표 메뉴  사진(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
-                                    - 샘플처럼 반반 분리가 가능하도록 반듯하게 원형이 되게끔 정면각으로 찍은, 각 좌우를 대표하는 메뉴 이미지 사진 2장(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
-                                    <br>
-                                    선택사항<br>
-                                    - 로고파일 (없을시 앞에서 선택한 폰트로 상호명이 들어감)<br>
-                                    - 하단에 들어갈 10~30자 이내의 서브 텍스트<br>
-                                    - 좌우 영역에 들어갈 10자이내 텍스트 2가지 (Ex.점심에는 식사, 저녁에는 술안주)<br>
-                                </p>
+                                        필수사항</br>
+                                        - 4~6자리 짝수 메인 텍스트(ex.상호명, 강조내용)<br>
+                                        - 강조하고 싶은 키워드 3~4개 (ex. 점심저녁평일주말)<br>
+                                        - 반듯하게 원형이 되게끔 정면각으로 찍은 대표 이미지 사진(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                        - 깔끔한 배경사진<br>
+                                        <br>
+                                        선택사항<br>
+                                        - 원형 위에 들어가는 12자 이내의 서브 텍스트 1 (ex. 점심 저녁 장사 모두 붙잡은)<br>
+                                        - 20자 이내의 서브 텍스트 2 (ex. ~는 실패가 없습니다)<br>
+                                        - 로고 (상단 좌측에 들어가게 됩니다)<br>
+                                    </p>
+                                </div>
                             </div>
                             <div class="main-set">
-                                <div class="radio-set">
-                                    <input type="radio" name="main" value="Set4">Set4
+                                <div class="radio-style">
+                                    <input type="radio" id="radio-1-2" name="main-radio" class="radio big-radio" value="Set2"/><label for="radio-1-2"></label>Set2<br/>                               
                                 </div>
-                                <p class="main-commend"> 추천 대상 : 상호명보다 특징을 강조하고 싶은 경우, 누끼 대표메뉴 이미지가 있는 경우</p>
                                 <div>
-                                    <img class="mobile" src="img/main-set4-mobile.png" alt="main-set4-mobile">
-                                    <img class="basic" src="img/main-set4.png" alt="main-set4">
+                                    <p class="text-commend"> 추천 대상 : 로고(상호명)을 강조하고 싶은 경우, 대표메뉴 하나를 강조하고 싶은 경우</p>
+                                    <div class="main-img">
+                                        <img class="mobile" src="img/main-set2-mobile.png" alt="main-set2-mobile">
+                                        <img class="basic" src="img/main-set2.png" alt="main-set2">
+                                    </div>
                                 </div>
-                                <p class="basic-text">
-                                    필수사항<br>
-                                    - 로고 위에 들어갈 10~20자 이내의 서브 텍스트 (ex. 대한민국 대표 쪽갈비찜)<br>
-                                    - 25자 이내의 메인 텍스트 (ex. 쪽갈비 브랜드 최초 원팩 조리가능 창업)<br>
-                                    - 비스듬히 찍은 대표 메뉴 사진 (누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
-                                    <br>
-                                    선택사항<br>
-                                    - 상단과 배경에 패턴식으로 들어갈 로고파일<br>
-                                    - 메인텍스트 우측에 들어가는 4글자 이내의 간단한 텍스트(ex. 전액면제)<br>
-                                    - 메인텍스트 아래에 들어가는 서브 텍스트 (ex. ~에서 창업주분들을 모집합니다)<br>
-                                </p>
+                                <div class="" style="display: none;">
+                                    <p class="basic-text">
+                                        필수사항<br>
+                                        - 로고파일<br>
+                                        - 로고 위에 들어갈 10~30자 이내의 서브 텍스트<br>
+                                        - 로고 아래에 들어갈 비스듬히 찍은 대표 메뉴 사진(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                        - 깔끔한 배경사진<br>
+                                    </p>
+                                </div>
                             </div>
                             <div class="main-set">
-                                <div class="radio-set">
-                                    <input type="radio" name="main" value="Set5">Set5
+                                <div class="radio-style">
+                                    <input type="radio" id="radio-1-3" name="main-radio" class="radio big-radio" value="Set3"/><label for="radio-1-3"></label>Set3<br/>                               
                                 </div>
-                                <p class="main-commend"> 추천 대상 : 상호명과 특징만 심플하게 강조하고 싶은 경우</p>
                                 <div>
+                                    <p class="text-commend"> 추천 대상 : 점심/저녁 영업을 강조하고 싶은 경우, 정면각으로 찍은 메뉴 사진이 있는 경우</p>
+                                    <div class="main-img">
+                                        <img class="mobile" src="img/main-set3-mobile.png" alt="main-set3-mobile">
+                                        <img class="basic" src="img/main-set3.png" alt="main-set3">
+                                    </div>
+                                </div>
+                                <div class="" style="display: none;">
+                                    <p class="basic-text">
+                                        필수사항<br>
+                                        - 로고 위에 들어갈 10~30자 이내의 서브 텍스트<br>
+                                        - 로고 아래에 들어갈 대표 메뉴  사진(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                        - 샘플처럼 반반 분리가 가능하도록 반듯하게 원형이 되게끔 정면각으로 찍은, 각 좌우를 대표하는 메뉴 이미지 사진 2장(누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                        <br>
+                                        선택사항<br>
+                                        - 로고파일 (없을시 앞에서 선택한 폰트로 상호명이 들어감)<br>
+                                        - 하단에 들어갈 10~30자 이내의 서브 텍스트<br>
+                                        - 좌우 영역에 들어갈 10자이내 텍스트 2가지 (Ex.점심에는 식사, 저녁에는 술안주)<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main-set">
+                                <div class="radio-style">
+                                    <input type="radio" id="radio-1-4" name="main-radio" class="radio big-radio" value="Set4"/><label for="radio-1-4"></label>Set4<br/>                               
+                                </div>
+                                <div>
+                                    <p class="text-commend"> 추천 대상 : 상호명보다 특징을 강조하고 싶은 경우, 누끼 대표메뉴 이미지가 있는 경우</p>
+                                    <div class="main-img">
+                                        <img class="mobile" src="img/main-set4-mobile.png" alt="main-set4-mobile">
+                                        <img class="basic" src="img/main-set4.png" alt="main-set4">
+                                    </div>
+                                </div>
+                                <div class="" style="display: none;">
+                                    <p class="basic-text">
+                                        필수사항<br>
+                                        - 로고 위에 들어갈 10~20자 이내의 서브 텍스트 (ex. 대한민국 대표 쪽갈비찜)<br>
+                                        - 25자 이내의 메인 텍스트 (ex. 쪽갈비 브랜드 최초 원팩 조리가능 창업)<br>
+                                        - 비스듬히 찍은 대표 메뉴 사진 (누끼 딴 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                        <br>
+                                        선택사항<br>
+                                        - 상단과 배경에 패턴식으로 들어갈 로고파일<br>
+                                        - 메인텍스트 우측에 들어가는 4글자 이내의 간단한 텍스트(ex. 전액면제)<br>
+                                        - 메인텍스트 아래에 들어가는 서브 텍스트 (ex. ~에서 창업주분들을 모집합니다)<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main-set">
+                                <div class="radio-style">
+                                    <input type="radio" id="radio-1-5" name="main-radio" class="radio big-radio" value="Set5"/><label for="radio-1-5"></label>Set5<br/>                               
+                                </div>
+                                <p class="text-commend"> 추천 대상 : 상호명과 특징만 심플하게 강조하고 싶은 경우</p>
+                                <div class="main-img">
                                     <img class="mobile" src="img/main-set5-mobile.png" alt="main-set5-mobile">
                                     <img class="basic" src="img/main-set5.png" alt="main-set5">
                                 </div>
-                                <p class="basic-text">
-                                    필수사항<br>
-                                    - 로고파일<br>
-                                    - 25자 이내의 서브 텍스트 (ex. 창업, 매출이 잘 나오는게 정답아닌가요?)<br>
-                                    - 어둡게 깔 배경용 이미지<br>
-                                    <br>
-                                    선택사항<br>
-                                    - 좌측 상단에 넣을 심볼형 로고 <br>
-                                </p>
+                                <div class="" style="display: none;">
+                                    <p class="basic-text">
+                                        필수사항<br>
+                                        - 로고파일<br>
+                                        - 25자 이내의 서브 텍스트 (ex. 창업, 매출이 잘 나오는게 정답아닌가요?)<br>
+                                        - 어둡게 깔 배경용 이미지<br>
+                                        <br>
+                                        선택사항<br>
+                                        - 좌측 상단에 넣을 심볼형 로고 <br>
+                                    </p>
+                                </div>
                             </div>
                             <div class="main-set">
-                                <div class="radio-set">
-                                    <input type="radio" name="main" value="Set6">Set6
+                                <div class="radio-style">
+                                    <input type="radio" id="radio-1-6" name="main-radio" class="radio big-radio" value="Set6"/><label for="radio-1-6"></label>Set6<br/>                               
                                 </div>
-                                <p class="main-commend"> 추천 대상 : 대표사진과 특징을 강조하고 싶은 경우</p>
-                                <div>
+                                <p class="text-commend"> 추천 대상 : 대표사진과 특징을 강조하고 싶은 경우</p>
+                                <div class="main-img">
                                     <img class="mobile" src="img/main-set6-mobile.png" alt="main-set6-mobile">
                                     <img class="basic" src="img/main-set6.png" alt="main-set6">
                                 </div>
-                                    <p class="basic-text-end">
-                                    필수사항<br>
-                                    - 로고파일(심볼, 워드형 둘다 있으면 좋음)<br>
-                                    - 20자 이내의 서브 타이틀 (ex. ㅇㅇㅇㅇ는 경쟁하지 않습니다)<br>
-                                    - 10자 이내의 메인 타이틀 (ex. 독점할 뿐입니다)<br>
-                                    - 깔끔한 고해상도의 배경용 이미지<br>
-                                    - 50자 이내로 문구 정리한 특징 3가지(각 글자수가가 비슷한편이 보기에 예쁩니다.)<br>
-                                    <br>
-                                    선택사항<br>
-                                    - 타이틀 상단에 넣을 심볼형 로고 <br>
-                                </p>
+                                <div class="" style="display: none;">
+                                    <p class="basic-text">
+                                        필수사항<br>
+                                        - 로고파일(심볼, 워드형 둘다 있으면 좋음)<br>
+                                        - 20자 이내의 서브 타이틀 (ex. ㅇㅇㅇㅇ는 경쟁하지 않습니다)<br>
+                                        - 10자 이내의 메인 타이틀 (ex. 독점할 뿐입니다)<br>
+                                        - 깔끔한 고해상도의 배경용 이미지<br>
+                                        - 50자 이내로 문구 정리한 특징 3가지(각 글자수가가 비슷한편이 보기에 예쁩니다.)<br>
+                                        <br>
+                                        선택사항<br>
+                                        - 타이틀 상단에 넣을 심볼형 로고 <br>
+                                    </p>
+                                </div>
+                                <p class="end"></p>
                             </div>
                             <p class="basic-text-end">
                                 공통 유의사항<br>
@@ -206,8 +231,8 @@
                     <p class="title">Step3. 스티키 메뉴 추가</p>
                     <div class="menu-step" id="step3">
                         <div>
-                            <div class="radio-set">
-                                <input type="radio" name="sticky" value="yes">추가 O
+                            <div class="checkbox-style">
+		                        <input type="checkbox" id="checkbox-2-1" class="checkbox big-checkbox" /><label for="checkbox-2-1"></label>추가
                             </div>
                             <div class="sticky-img">
                                 <img class="sticky" src="img/sticky.png" alt="sticky">
@@ -217,9 +242,6 @@
                                 - 페이지 각 영역이 단어로 된 메뉴와 대응 될 수 있게 순서와 구분이 확실할 경우 사용<br>
                                 * 상단 스티키 메뉴 선택시, 하단 스티키 상담신청 바는 선택 불가
                             </p>
-                            <div class="radio-set">
-                                <input type="radio" name="sticky" value="no">추가 X
-                            </div>
                             <p class="end"></p>
                             <div class="btn">
                                 <span class="pre-btn" onclick="prev(2)">previous</span>
@@ -230,20 +252,20 @@
                 </div>
                 <!-- 폰트 선택 -->
                 <div class="menu-area" style="display: none;">
-                    <p class="title">Step4. 폰트 선택</p>
+                    <p class="title">Step4. 강조 폰트 키워드 선택</p>
                     <div class="menu-step" id="step4">
-                        <div class="font-radio-set">
-                            <input type="radio" name="font" value="둥글둥글함"><img class="font-img" src="img/font-둥글둥글함.png" alt="둥글둥글함">
-                            <input type="radio" name="font" value="살짝 귀여운"><img class="font-img" src="img/font-살짝귀여운.png" alt="살짝귀여운">
-                            <input type="radio" name="font" value="약간 삐죽"><img class="font-img" src="img/font-약간삐쭉.png" alt="약간삐죽">
-                            <input type="radio" name="font" value="옛스러운"><img class="font-img" src="img/font-옛스러운.png" alt="옛스러운"><br>
-                            <input type="radio" name="font" value="나뉘어진"><img class="font-img" src="img/font-나뉘어진.png" alt="나뉘어진">
-                            <input type="radio" name="font" value="세련된"><img class="font-img" src="img/font-세련된.png" alt="세련된">
-                            <input type="radio" name="font" value="전통적인"><img class="font-img" src="img/font-전통적인.png" alt="전통적인">
-                            <input type="radio" name="font" value="전통적인1"><img class="font-img" src="img/font-전통적인-1.png" alt="전통적인1"><br>
-                            <input type="radio" name="font" value="딱딱함"><img class="font-img" src="img/font-딱딱함.png" alt="딱딱함">
-                            <input type="radio" name="font" value="견고함"><img class="font-img" src="img/font-견고함.png" alt="견고함">
-                            <input type="radio" name="font" value="거대한"><img class="font-img" src="img/font-거대한.png" alt="거대한">
+                        <div>
+                            <div class="radio-style">
+                                <input type="radio" id="radio-2-1" name="font-radio" class="radio big-radio" value="살짝 귀여운"/><label for="radio-2-1"></label>살짝 귀여운<br/>
+			                    <input type="radio" id="radio-2-2" name="font-radio" class="radio big-radio" value="약간 삐죽한"/><label for="radio-2-2"></label>약간 삐죽한<br/>
+			                    <input type="radio" id="radio-2-3" name="font-radio" class="radio big-radio" value="옛스러운"/><label for="radio-2-3"></label>옛스러운<br/>
+			                    <input type="radio" id="radio-2-4" name="font-radio" class="radio big-radio" value="나뉘어진"/><label for="radio-2-4"></label>나뉘어진<br/>
+			                    <input type="radio" id="radio-2-5" name="font-radio" class="radio big-radio" value="세련된"/><label for="radio-2-5"></label>세련된<br/>
+                                <input type="radio" id="radio-2-6" name="font-radio" class="radio big-radio" value="전통적인"/><label for="radio-2-6"></label>전통적인<br/>
+                                <input type="radio" id="radio-2-7" name="font-radio" class="radio big-radio" value="딱딱한"/><label for="radio-2-7"></label>딱딱한<br/>
+                                <input type="radio" id="radio-2-8" name="font-radio" class="radio big-radio" value="견고한"/><label for="radio-2-8"></label>견고한<br/>
+                                <input type="radio" id="radio-2-9" name="font-radio" class="radio big-radio" value="거대한"/><label for="radio-2-9"></label>거대한<br/>
+                            </div>
                             <p class="end"></p>
                         </div>
                         <div class="btn">
@@ -252,13 +274,13 @@
                         </div>
                     </div>
                 </div>
-                 <!-- 레이아웃 선택 -->
+                 <!-- 타이틀 스타일 선택 -->
                 <div class="menu-area" style="display: none;">
-                    <p class="title">Step5. 레이아웃 선택</p>
+                    <p class="title">Step5. 타이틀 스타일 선택</p>
                     <div class="menu-step" id="step5">
                         <div>
-                            <div class="radio-set">
-                                <input type="radio" name="layout" value="Set1">Set1
+                            <div class="radio-style">
+                                <input type="radio" id="radio-3-1" name="title-radio" class="radio big-radio" value="Set1"/><label for="radio-3-1"></label>Set1<br/>                               
                             </div>
                             <div class="layout-set">
                                 <div class="layout-img">
@@ -283,8 +305,8 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="radio-set">
-                                <input type="radio" name="layout" value="Set2">Set2
+                            <div class="radio-style">
+                                <input type="radio" id="radio-3-2" name="title-radio" class="radio big-radio" value="Set2"/><label for="radio-3-2"></label>Set2<br/>                               
                             </div>
                             <div class="layout-set">
                                 <div class="layout-img">
@@ -308,8 +330,8 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="radio-set">
-                                <input type="radio" name="layout" value="Set3">Set3
+                            <div class="radio-style">
+                                <input type="radio" id="radio-3-3" name="title-radio" class="radio big-radio" value="Set3"/><label for="radio-3-3"></label>Set3<br/>                               
                             </div>
                             <div class="layout-set">
                                 <div class="layout-img">

@@ -13,17 +13,116 @@ html, body {
     padding: 20px;
     text-align: center;
 }
+
+/* Radio */
+.radio {
+	display: none;
+}
+.radio + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+.radio:checked + label:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #99a1a7;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+.radio:checked + label {
+	background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+.radio + label:active, .radio:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.big-radio + label {
+	padding: 16px;
+    margin: 10px;
+    /* text 가운데 정렬 */
+    vertical-align: middle; 
+}
+.big-radio:checked + label:after {
+	width: 24px;
+	height: 24px;
+	left: 4px;
+	top: 4px;
+}
+.radio-style {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* check box */
+label {
+	display: inline;
+}
+.checkbox {
+	display: none;
+}
+.checkbox + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+.checkbox + label:active, .checkbox:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checkbox:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+.checkbox:checked + label:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+.big-checkbox + label {
+	padding: 18px;
+    margin: 10px;
+    vertical-align: middle; 
+}
+
+.big-checkbox:checked + label:after {
+	font-size: 28px;
+	left: 6px;
+}
+
+
 #form-page {
     background-color: #edf0f2;
-    padding: 50px 0;
+    padding: 50px 50px;
     overflow: hidden;
 }
 #form-page .main-container {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
-    gap: 40px;
 }
 #form-page .main-container article {
     background-color: #fff;
@@ -33,27 +132,27 @@ html, body {
 #form-page .title {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 15px;
     text-align: center;
     color: #444444;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #ddd;
 }
 
 /* menu-box style */
 #form-page .menu-box {
-    width: 13%;
+    width: 10%;
     height: 30%;
 }
 #form-page .menu-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     color: #656565;
-    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
@@ -61,7 +160,7 @@ html, body {
 #form-page .menu-box .menu-text .click{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     color: #319ff8;
     flex-wrap: wrap;
@@ -69,68 +168,98 @@ html, body {
 
 /* form-box style */
 #form-page .form-box {
-    width: 60%;
+    width: 77%;
     height: auto;
 }
 
 #form-page .form-box .menu-area {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     color: #444444;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 /* 단계별 세부 내용 */
 #form-page .menu-step {
-  width : 90%;
-  display: inline-block;
-  overflow: hidden;
+    width : 90%;
+    display: inline-block;
+    overflow: hidden;
+  }
+  #form-page .menu-step p{
+      text-align: left;
+  }
+  
+/* step1 */
+.input-color {
+    width: 100%;
+    height: auto;
+    display: flex;
 }
-#form-page .menu-step p{
-    text-align: left;
+.color-box {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+}
+.color-plus {
+    width: 77px;
+    height: 77px;
+    float: left;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    border: 1px dashed rgb(158, 156, 156);
+    cursor: pointer;
 }
 
-/* radio */
-#form-page .font-radio-set{
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 50px;
+/* step2 */
+.main-img {
+    display: flex;
+    margin-bottom: 20px;
 }
-#form-page .radio-set{
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 50px;
-    text-align: left;
-    clear: both;
-    width: 100%;
+.main-set .mobile {
+    width: 20%;
+    height: 40%;
+    object-fit: cover;
+    margin-right: 15px;
 }
-#step6 .const {
-    font-size: 18px;
-    font-weight: normal;
-    text-align: left;
-    margin: 5px;
+.main-set .basic {
+    width: 60%;
+    height: 40%;
+    object-fit: cover;
+}
+
+/* step3 */
+.checkbox-style {
+    float: left;
+    font-size: 20px;
 }
 #form-page #step3 .sticky-img{
     display: inline-block;
     overflow: hidden;
-  }
+    padding: 10px 0;
+}
+#step3 .sticky {
+    width: 85%;
+    object-fit: contain;
+    float: left;
+    display: block;
+}
+
+
+#step6 .const {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    margin: 5px;
+}
 
 #form-page .form-box .main-set {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 13px;
-    text-align: center;
-}
-#form-page .form-box .main-set .main-commend {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
 }
 #form-page .form-box .layout-set {
@@ -148,7 +277,7 @@ html, body {
 #form-page .basic-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 18px;
     color: #656565;
     flex-wrap: wrap;
@@ -158,7 +287,7 @@ html, body {
 #form-page .basic-text-end {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 20px;
     color: #656565;
     flex-wrap: wrap;
@@ -168,10 +297,16 @@ html, body {
     border-bottom: 1px solid #ddd;
     clear: both;
 }
+.text-commend {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
 #form-page .const-basic-text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 18px;
     color: #656565;
     flex-wrap: wrap;
@@ -180,6 +315,7 @@ html, body {
 }
 #form-page .end{
     border-bottom: 1px solid #ddd;
+    padding-top: 10px;
     clear: both;
 }
 
@@ -196,33 +332,6 @@ input:focus {
     outline:none;
 }
 
-/* 메인 이미지 */
-.main-set .mobile {
-    width: 20%;
-    height: 40%;
-    object-fit: cover;
-}
-.main-set .basic {
-    width: 60%;
-    height: 40%;
-    object-fit: cover;
-}
-
-/* 스티키 이미지 */
-#step3 .sticky {
-    width: 80%;
-    object-fit: contain;
-    float: left;
-    display: block;
-}
-
-/* 폰트 이미지 */
-#step4 .font-img {
-    width: 100px;
-    height: 30px;
-    object-fit: contain;
-    
-}
 /* 레이아웃 이미지 */
 #step5 .layout-img-set {
     width: 60%;
@@ -244,10 +353,10 @@ input:focus {
 }
 
 /* button style */
-#form-page .form-box .next-btn {
+.next-btn {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 13px;
+    font-size: 15px;
     display: inline-flex;
     padding: 10px 20px;
     color: #fcfcfc;
@@ -258,10 +367,10 @@ input:focus {
     float: right;
     cursor: pointer;
 }
-#form-page .form-box .pre-btn {
+.pre-btn {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 13px;
+    font-size: 15px;
     display: inline-flex;
     padding: 10px 20px;
     color: #fcfcfc;
@@ -271,11 +380,12 @@ input:focus {
     border: none;
     float: left;
     cursor: pointer;
+    clear: both;
 }
-#form-page .form-box .submit-btn {
+.submit-btn {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
-    font-size: 13px;
+    font-size: 15px;
     display: inline-flex;
     padding: 10px 20px;
     color: #fcfcfc;
@@ -287,11 +397,10 @@ input:focus {
     cursor: pointer;
 }
 
-
 /* 반응형 menu-box */
 @media  (max-width: 1024px){
     #form-page .menu-box {
-        width: 15%;
+        width: 10%;
         height: auto;
     }
 }

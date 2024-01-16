@@ -29,3 +29,18 @@ function prev(idx){
     $(".menu-box .menu").removeClass("click");
     $(".menu-box .menu").eq(idx - 1).addClass("click");
 }
+
+/** 컬러톤 추가 버튼 **/
+function setColorBox() {
+    var colorBox2 = $('#color-box-2');
+    var colorBox3 = $('#color-box-3');
+    var setcolor = $('.color-plus');
+
+    if (colorBox2.css('display') === 'none') {
+        colorBox2.show();
+    } else if (colorBox2.css('display') === 'block') {
+        colorBox3.show();
+        setcolor.hide();
+    }
+}
+
