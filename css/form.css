@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
   }
-.header{
+.header {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
     font-size: 30px;
@@ -105,13 +105,12 @@ label {
     margin: 10px;
     vertical-align: middle; 
 }
-
 .big-checkbox:checked + label:after {
 	font-size: 28px;
 	left: 6px;
 }
 
-
+/* form */
 #form-page {
     background-color: #edf0f2;
     padding: 50px 50px;
@@ -171,12 +170,11 @@ label {
     width: 77%;
     height: auto;
 }
-
 #form-page .form-box .menu-area {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 150%;
     color: #444444;
     margin-bottom: 20px;
     text-align: center;
@@ -248,29 +246,129 @@ label {
     display: block;
 }
 
-
-#step6 .const {
-    font-size: 20px;
-    font-weight: normal;
-    text-align: left;
-    margin: 5px;
+/* step5 */
+.layout-img {
+    display: flex;
+    margin-bottom: 20px;
+}
+.layout-img .basic {
+    width: 40%;
+    object-fit: contain;
+    float: left;
 }
 
-#form-page .form-box .main-set {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: normal;
+/* step6 */
+.accordion-container{
+    width: 100%;
+}
+.accordion-container .item-wrap{
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 13px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.accordion-container .item-wrap:focus {
+    border: 1px solid #194bd6;
+}
+.accordion-container .item-wrap img {
+    width: 30px;
+}
+.accordion-container .item-wrap .ar-title{
     font-size: 16px;
-    text-align: center;
+    font-weight: bold;
+    margin: 0;
 }
-#form-page .form-box .layout-set {
-    clear: both;
+.accordion-container .item-wrap img{
+    transform: rotate(180deg);
 }
-#form-page .form-box .const-select {
-    margin-bottom: 10px;
-    text-align: center;
+.accordion-container .open img{
+    transform: rotate(0deg);
 }
-#form-page .form-box .receipt-set {
-    clear: both;
+.accordion-container .item-wrap .detail-info{
+    margin-top: 41px;
+    position: relative;
+    display: none;
+}
+.accordion-container .item-wrap .detail-info:after{
+    position: absolute;
+    content: "";
+    width: calc(100% + 40px);
+    top:-20px;
+    left: -20px;
+    height: 1px;
+    background-color: #dddddd;
+}
+
+.const-img {
+    display: flex;
+    margin-bottom: 20px;
+}
+.const-img .mobile {
+    width: 20%;
+    height: 30%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.const-img .basic {
+    width: 50%;
+    height: 30%;
+    object-fit: cover;
+}
+.feature-img {
+    display: flex;
+    margin-bottom: 20px;
+}
+.feature-img .mobile {
+    width: 20%;
+    height: 30%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.feature-img .basic {
+    width: 60%;
+    height: 30%;
+    object-fit: cover;
+}
+.receipt-img {
+    display: flex;
+    margin-bottom: 20px;
+}
+.receipt-img .basic {
+    width: 60%;
+    height: 30%;
+    object-fit: cover;
+}
+.contact-img {
+    display: flex;
+    margin-bottom: 20px;
+}
+.contact-img .basic {
+    width: 50%;
+    height: 30%;
+    object-fit: cover;
+}
+.franchise-img{
+    display: flex;
+    margin-bottom: 20px;
+}
+.franchise-img .mobile {
+    width: 20%;
+    height: 30%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.franchise-img .basic {
+    width: 50%;
+    height: 30%;
+    object-fit: cover;
 }
 
 /* text style */
@@ -278,7 +376,7 @@ label {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 150%;
     color: #656565;
     flex-wrap: wrap;
     margin-bottom: 15px;
@@ -288,7 +386,7 @@ label {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 150%;
     color: #656565;
     flex-wrap: wrap;
     margin-bottom: 10px;
@@ -301,16 +399,6 @@ label {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
-}
-#form-page .const-basic-text {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    color: #656565;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
     text-align: center;
 }
 #form-page .end{
@@ -330,26 +418,6 @@ label {
 }
 input:focus {
     outline:none;
-}
-
-/* 레이아웃 이미지 */
-#step5 .layout-img-set {
-    width: 60%;
-    object-fit: contain;
-    clear: both;
-}
-
-.const-select .mobile {
-    width: 15%;
-    height: 40%;
-    object-fit: contain;
-}
-
-.const-select .basic {
-    width: 50%;
-    height: 40%;
-    object-fit: contain;
-    clear: both;
 }
 
 /* button style */

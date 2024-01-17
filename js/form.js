@@ -30,7 +30,7 @@ function prev(idx){
     $(".menu-box .menu").eq(idx - 1).addClass("click");
 }
 
-/** 컬러톤 추가 버튼 **/
+// 컬러톤 추가
 function setColorBox() {
     var colorBox2 = $('#color-box-2');
     var colorBox3 = $('#color-box-3');
@@ -42,5 +42,42 @@ function setColorBox() {
         colorBox3.show();
         setcolor.hide();
     }
+}
+
+// 메인 화면 선택
+function showMainDiv() {
+    var selectedRadioId = $('input[name="main-radio"]:checked').attr('id');
+    $('.main-div').hide();
+    $('#div-' + selectedRadioId).show();
+}
+
+// 타이틀 스타일 선택
+function showTitleDiv() {
+    var selectedRadioId = $('input[name="title-radio"]:checked').attr('id');
+    $('.title-div').hide();
+    $('#div-' + selectedRadioId).show();
+}
+
+// 구성 선택
+function detailOpen(element) {
+    $(element).siblings(".detail-info").slideToggle();
+}
+
+function showFeatureDiv() {
+    var selectedRadioId = $('input[name="feature-radio"]:checked').attr('id');
+    $('.feature-div').hide();
+    $('#div-' + selectedRadioId).show();
+}
+
+function showMenuDiv() {
+    var selectedRadioId = $('input[name="menu-radio"]:checked').attr('id');
+    $('.menu-div').hide();
+    $('#div-' + selectedRadioId).show();
+}
+
+function showStepDiv() {
+    var selectedRadioId = $('input[name="step-radio"]:checked').attr('id');
+    $('.step-div').hide();
+    $('#div-' + selectedRadioId).show();
 }
 
