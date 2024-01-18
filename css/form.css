@@ -52,7 +52,6 @@ html, body {
 .big-radio + label {
 	padding: 16px;
     margin: 10px;
-    /* text 가운데 정렬 */
     vertical-align: middle; 
 }
 .big-radio:checked + label:after {
@@ -113,11 +112,11 @@ label {
 /* form */
 #form-page {
     background-color: #edf0f2;
-    padding: 50px 50px;
+    padding: 50px 20px;
     overflow: hidden;
 }
 #form-page .main-container {
-    padding: 30px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -274,6 +273,7 @@ label {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .accordion-container .item-wrap:focus {
     border: 1px solid #194bd6;
@@ -465,6 +465,14 @@ input:focus {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    #form-page {
+        background-color: #edf0f2;
+        padding: 30px 10px;
+        overflow: hidden;
+    }
+}
+
 /* 반응형 menu-box */
 @media  (max-width: 1024px){
     #form-page .menu-box {
@@ -489,5 +497,142 @@ input:focus {
     #form-page .form-box {
         width: 100%;
         height: auto;
+    }
+}
+
+/* mobile text */
+@media (max-width: 768px){
+    .header {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: bold;
+        font-size: 25px;
+        padding: 20px;
+        text-align: center;
+    }
+    #form-page .title {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 15px;
+        text-align: center;
+        color: #444444;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #ddd;
+    }
+    #form-page .menu-text {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 20px;
+        color: #656565;
+        width: 100%;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #form-page .menu-box .menu-text .click{
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 20px;
+        color: #319ff8;
+        flex-wrap: wrap;
+    }    
+    #form-page .form-box .menu-area {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150%;
+        color: #444444;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .radio-style {
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+    }
+    #form-page .basic-text {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150%;
+        color: #656565;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    #form-page .basic-text-end {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150%;
+        color: #656565;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        clear: both;
+    }
+    .text-commend {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
+    }
+    .accordion-container .item-wrap .ar-title{
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .next-btn {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 13px;
+        display: inline-flex;
+        padding: 10px 20px;
+        color: #fcfcfc;
+        background: #194bd6;
+        margin-top: 20px;
+        border-radius: 100px;
+        border: none;
+        float: right;
+        cursor: pointer;
+    }
+    .pre-btn {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 13px;
+        display: inline-flex;
+        padding: 10px 20px;
+        color: #fcfcfc;
+        background: #194bd6;
+        margin-top: 20px;
+        border-radius: 100px;
+        border: none;
+        float: left;
+        cursor: pointer;
+        clear: both;
+    }
+    .submit-btn {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: normal;
+        font-size: 13px;
+        display: inline-flex;
+        padding: 10px 20px;
+        color: #fcfcfc;
+        background: #194bd6;
+        margin-top: 20px;
+        border-radius: 100px;
+        border: none;
+        float: right;
+        cursor: pointer;
     }
 }
